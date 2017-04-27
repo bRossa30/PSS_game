@@ -1,1 +1,1 @@
-# JS3
+# Paper, scissors, stone game
