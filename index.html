@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8">
+	<title>Game</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container">
+		<div id="js-gameWelcome" class="">
+			<h1>Witaj w grze</h1>
+			<div id="js-label">
+				<span class="btn btn-small btn-paper">Papier</span> 
+				<span class="btn btn-small btn-scissors">Nożyce</span> 
+				<span class="btn btn-small btn-rock">Kamień</span> 
+			</div>
+		</div>
+		<div id="js-gameActive">
+			<h2 id="js-gameCounter">Gra nr:</h2>
+			<button id="js-playerChoice-paper" class="btn btn-large btn-paper">
+				<i class="fa fa-hand-paper-o"></i>
+				Papier
+			</button> 
+			<button id="js-playerChoice-scissors" class="btn btn-large btn-scissors"><i class="fa fa-hand-scissors-o"></i>
+				Nożyce
+			</button> 
+			<button id="js-playerChoice-rock" class="btn btn-large btn-rock"><i class="fa fa-hand-rock-o"></i>
+				Kamień
+			</button> 
+			<div class="results">
+				<div class="row">
+					<div class="col-m-4">
+						<span id="js-playerScore" class="score"></span>
+						<h3 id="js-player">Gracz:</h3>
+						<div id="js-playerChoice">Wybór gracza:</div>
+						<p id="js-playerResult"></p>
+					</div>
+					<div class="col-m-4">
+						<h3>vs.</h3>
+					</div>
+					<div class="col-m-4">
+						<span id="js-computerScore" class="score"></span>
+						<h3>Gracz: Komputer</h3>
+						<div id="js-computerChoice">Wybór komputera:</div>
+						<p id="js-computerResult"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="js-gameEnd">
+			<div id='js-winner' class="gameEnd__title"><p>Koniec gry:</p></div>
+		</div>
+		<button id="js-newGame" class="btn btn-game">Nowa gra</button>
+	</div>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

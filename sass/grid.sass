@@ -1,0 +1,79 @@
+@import variable
+
+*
+	box-sizing: border-box
+
+.row 
+	&:before,
+	&:after 
+		content: ""
+		display: table
+		clear: both
+
+.container 
+	width: 100%
+	max-width: 1200px
+	margin: $grid-margin auto
+	padding: $container-padding-t-b 0
+	text-align: center
+
+
+%col
+	width: 100%
+	float: left
+	min-height: 1px
+
+img 
+	max-width: 100%
+
+
+[class*="col-"]
+	@extend %col
+	padding: $col-padding
+
+[class*="col2-"]
+	@extend %col
+	padding: 0
+
+.col-0-padding 
+	padding: 0 !important
+
+@media ($breakpoint-s_max)
+	@for $i from 1 through $grid-col
+		.col-s-#{$i}
+			width: 100% / $grid-col * $i
+	
+	//grid2
+
+	@for $i from 1 through $grid2-col
+		.col2-s-#{$i} 
+			width: 100% / $grid2-col * $i
+
+
+@media ($breakpoint-s_min)
+	@for $i from 1 through $grid-col
+		.col-m-#{$i} 
+			width: 100% / $grid-col * $i
+
+	[class*="col-"] 
+		padding: $col-padding-sm	
+
+	//grid2
+
+	@for $i from 1 through $grid2-col
+		.col2-m-#{$i} 
+			width: 100% / $grid2-col * $i
+
+
+@media ($breakpoint-s_min) and ($breakpoint-sm_max)
+	@for $i from 1 through $grid-col 
+		.col-sm-#{$i} 
+			width: 100% / $grid-col * $i
+
+
+@for $i from 0 through $grid-col - 1
+	.col-offset-#{$i}
+		margin-left: 100% / $grid-col * $i
+
+		
+

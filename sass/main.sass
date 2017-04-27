@@ -1,0 +1,112 @@
+body
+	background: $bcgColor
+	color: $fontColor
+
+.container 
+	margin-top: 10vh	
+
+h1
+	font-size: 80px
+	margin: 40px
+
+h2 
+	font-size: 50px
+
+h3 
+	display: inline-block
+	font-size: 28px
+	margin-bottom: 40px
+
+p,
+div 
+	font-size: 20px
+	margin-bottom: 10px
+
+.hidden 
+	display: none
+
+button
+	cursor: pointer
+
+	&:hover,
+	&:active,
+	&:focus
+		outline: none
+		border: none
+
+.btn 
+	border-radius: 3px
+	color: $fontColor
+	border: none
+	transition: .3s
+
+
+	&-game
+		padding: 15px 60px
+		font-size: 28px
+		background: $gameColor
+		margin-top: 50px
+
+		&:hover 
+			background: $gameColorHover
+
+	&-small 
+		padding: 5px 30px 
+		margin: 20px
+
+	&-large
+		padding: 10px 40px
+		margin: 50px
+		font-size: 24px
+
+	&-paper
+		background: $paperColor
+
+		&:hover 
+			background: $paperColorHover
+
+	&-scissors
+		background: $scissorsColor
+
+		&:hover 
+			background: $scissorsColorHover
+
+	&-rock
+		background: $rockColor
+
+		&:hover 
+			background: $rockColorHover
+
+.results 
+	margin-top: 50px
+
+	i.fa 
+		margin-left: 20px
+		font-size: 24px
+		display: inline-block
+		height: 40px
+		line-height: 40px
+		width: 40px
+		border-radius: 3px
+
+		&-hand-rock-o 
+			background: $rockColor
+
+		&-hand-scissors-o 
+			background: $scissorsColor
+
+		&-hand-paper-o
+			background: $paperColor
+
+.score 
+	display: inline-block
+	padding: 5px 20px
+	background: $scoreBcg
+	font-size: 32px
+	border-radius: 50%
+	margin-right: 20px
+
+.gameEnd__title p
+	margin-bottom: 40px
+	font-size: 24px
+
